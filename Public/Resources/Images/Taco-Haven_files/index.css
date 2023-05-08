@@ -1,0 +1,316 @@
+/* Main Body  */
+
+body {
+  margin: 0;
+  background-color: black;
+}
+
+/* Nav Bar  */
+
+nav {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: 'Amatic SC', cursive;
+  font-size: 25px;
+}
+
+nav li {
+  margin-right: 20px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* header  */
+
+.header {
+  height: 350px;
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRba4ZgxXSmJ6mp4n1BmVaBdIHi-zPpiZd4bw&usqp=CAU);
+  image-rendering: auto;
+  display: flex;
+  justify-content: center;
+}
+
+
+
+.header-logo {
+  image-rendering: auto;
+  height: 250px;
+  width: 250px;
+  margin-top: 30%;
+}
+
+
+/* Home  */
+
+#home {
+  padding: 0.1rem 0;
+  image-rendering: auto;
+  background-color: black;
+}
+
+.home-wrapper-container {
+  background-color: black;
+}
+
+.taco-shop{
+  image-rendering: auto;
+  outline: #000000;
+  float: left;
+  padding: 5rem;
+}
+
+#home h2 {
+  font-size: 2.2rem;
+  color: orange;
+  font-family: 'Amatic SC', cursive;
+  display: flex;
+  justify-content: center;
+}
+
+#home p {
+  font-size: 1.8rem;
+  color: orange;
+  font-family: 'Amatic SC', cursive;
+  display: flex;
+  justify-content: center;
+}
+
+.home-text {
+  flex: 1 1 400px;
+  padding: 30px;
+  font-family: 'Amatic SC', cursive;
+  display: flex;
+  justify-content: center;
+}
+
+.opening-times {
+  color: orange;
+  line-height: 30px;
+  font-family: 'Amatic SC', cursive;
+  display: flex;
+  justify-content: center;
+  font-size: 1.8rem;
+}
+/* About Us  */
+
+#about {
+  padding: 5rem 0;
+  image-rendering: auto;
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRba4ZgxXSmJ6mp4n1BmVaBdIHi-zPpiZd4bw&usqp=CAU);
+}
+
+.about-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: black;
+}
+
+#about h2 {
+  font-size: 2.2rem;
+  color: orange;
+  font-family: 'Amatic SC', cursive;
+}
+
+#about p {
+  font-size: 1.8rem;
+  color: orange;
+  font-family: 'Amatic SC', cursive;
+}
+
+#about .small {
+  font-size: 2.4rem;
+  color: orange;
+  font-family: 'Amatic SC', cursive;
+  font-weight: 600;
+}
+
+.about-img {
+  flex: 1 1 400px;
+  padding: 30px;
+  image-rendering: auto;
+}
+
+
+.about-text {
+  flex: 1 1 400px;
+  padding: 30px;
+  margin: auto;
+}
+
+
+.about-img img {
+  display: block;
+  height: 400px;
+  max-width: 100%;
+  margin: auto;
+  object-fit: cover;
+  object-position: right;
+  image-rendering: auto;
+}
+
+
+/* Food Menu */
+
+.food-menu-heading {
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 800;
+  color: orange;
+  font-family: 'Amatic SC', cursive;
+}
+
+.food-menu-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 50px 0px 30px 0px;
+}
+
+.food-menu-container img {
+  display: block;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  image-rendering: auto;
+}
+
+.food-menu-item {
+  display: flex;
+  flex: 1 1 600px;
+  justify-content: space-evenly;
+  margin-bottom: 3rem;
+  color: orange;
+  font-family: 'Amatic SC', cursive;
+  font-size: 2rem;
+}
+
+.food-description {
+  margin: auto 1.5rem;
+}
+
+.font-title {
+  font-size: 4rem;
+  font-weight: 400;
+  color: orange;
+}
+
+.food-description p {
+  font-size: 2rem;
+  color: orange;
+  font-weight: 500;
+}
+
+.food-description .food-price {
+  color: #117964;
+  font-weight: 700;
+}
+
+/* contact us  */
+
+#contact {
+  padding: 5rem 0;
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRba4ZgxXSmJ6mp4n1BmVaBdIHi-zPpiZd4bw&usqp=CAU);
+}
+
+.contact-container {
+  display: flex;
+  background: #000000;
+  border: 3px black;
+}
+
+.contact-img {
+  padding: 2%;
+  image-rendering: auto;
+
+}
+
+.contact-img img {
+  display: block;
+  height: 400px;
+  width: 100%;
+  object-position: center;
+  object-fit: cover;
+}
+
+.form-container {
+  padding: 1rem;
+  width: 50%;
+  margin: auto;
+  font-size: 1rem;
+  color: black;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.form-container input {
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 3px solid #000000;
+  padding: 1rem 0;
+  box-shadow: none;
+  outline: none;
+  margin-bottom: 1rem;
+  color: black;
+  font-weight: 500;
+  font-size: 1rem;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.form-container textarea {
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 3px solid #000000;
+  color: black;
+  outline: none;
+  padding: 1rem 0;
+  resize: none;
+  font-size: 1rem;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.form-container h2 {
+  font-size: 3rem;
+  font-weight: 500;
+  color: orange;
+  margin-bottom: 1rem;
+  margin-top: -1.2rem;
+  font-family: 'Amatic SC', cursive;
+}
+
+.form-container a {
+  font-size: 2rem;
+  font-family: 'Amatic SC', cursive;
+  color: orange;
+}
+
+#footer h2 {
+  text-align: center;
+  font-size: 2rem;
+  padding: 2.6rem;
+  font-weight: 500;
+  color: orange;
+  background: black;
+  font-family: 'Amatic SC', cursive;
+}

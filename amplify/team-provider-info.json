@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-tacohaven-dev-141903-authRole",
+      "UnauthRoleArn": "arn:aws:iam::778994178717:role/amplify-tacohaven-dev-141903-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::778994178717:role/amplify-tacohaven-dev-141903-authRole",
+      "Region": "eu-west-2",
+      "DeploymentBucketName": "amplify-tacohaven-dev-141903-deployment",
+      "UnauthRoleName": "amplify-tacohaven-dev-141903-unauthRole",
+      "StackName": "amplify-tacohaven-dev-141903",
+      "StackId": "arn:aws:cloudformation:eu-west-2:778994178717:stack/amplify-tacohaven-dev-141903/e7ef7bf0-eda2-11ed-b93c-0a187f42beda",
+      "AmplifyAppId": "dnq5zbilbzsn2"
+    },
+    "categories": {
+      "api": {
+        "tacohaven": {}
+      }
+    }
+  }
+}
