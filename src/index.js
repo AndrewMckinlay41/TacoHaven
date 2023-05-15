@@ -21,26 +21,21 @@ function main() {
 
         processForm(e.target.children);
     });
-
-    let view_button = document.getElementById("view-requests");
-
-    view_button.addEventListener("click", async function(e) {
-        e.preventDefault();
-
-        let requests = await API.graphql(graphqlOperation(listBookingRequests));
-        console.log(requests);
-    })
 }
 
+/**
+ * This function initialises the Amplify API with our public API keys
+ */
 function configureAmplify() {
     Amplify.configure(awsconfig);
-    console.log(Amplify);
+    console.debug(Amplify);
 }
 
 /**
  * Submits form contents to AWS Amplify
  */
 async function processForm(elements) {
+    // This object will store the fields of the booking form
     let request = {};
 
     for (let child of elements) {
@@ -52,8 +47,9 @@ async function processForm(elements) {
         request[child.name] = child.value;
     }
 
+    // Insert the booking request into the database
     let res = await API.graphql(graphqlOperation(createBookingRequest, {input: request}));
-    console.log(res);
+    console.debug(res);
 };
 
 // Add event listener to run main function on page load

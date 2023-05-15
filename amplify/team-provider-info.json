@@ -1,19 +1,19 @@
 {
-  "sampledev": {
+  "dev": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-tacohaven-sampledev-145923-authRole",
-      "UnauthRoleArn": "arn:aws:iam::778994178717:role/amplify-tacohaven-sampledev-145923-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::778994178717:role/amplify-tacohaven-sampledev-145923-authRole",
+      "AuthRoleName": "amplify-tacohavenfinal-dev-175739-authRole",
+      "UnauthRoleArn": "arn:aws:iam::778994178717:role/amplify-tacohavenfinal-dev-175739-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::778994178717:role/amplify-tacohavenfinal-dev-175739-authRole",
       "Region": "eu-west-2",
-      "DeploymentBucketName": "amplify-tacohaven-sampledev-145923-deployment",
-      "UnauthRoleName": "amplify-tacohaven-sampledev-145923-unauthRole",
-      "StackName": "amplify-tacohaven-sampledev-145923",
-      "StackId": "arn:aws:cloudformation:eu-west-2:778994178717:stack/amplify-tacohaven-sampledev-145923/8a2e9270-eda8-11ed-b2ec-067319cccd78",
-      "AmplifyAppId": "d1prmv6jnblih5"
+      "DeploymentBucketName": "amplify-tacohavenfinal-dev-175739-deployment",
+      "UnauthRoleName": "amplify-tacohavenfinal-dev-175739-unauthRole",
+      "StackName": "amplify-tacohavenfinal-dev-175739",
+      "StackId": "arn:aws:cloudformation:eu-west-2:778994178717:stack/amplify-tacohavenfinal-dev-175739/9ac2e0c0-f341-11ed-9c0b-02f21623886a",
+      "AmplifyAppId": "d3th4iqubbe9p2"
     },
     "categories": {
       "api": {
-        "tacohaven": {}
+        "tacohavenfinal": {}
       }
     }
   }
