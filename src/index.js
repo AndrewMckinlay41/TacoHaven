@@ -9,6 +9,8 @@ import { listBookingRequests } from './graphql/queries';
  * Main function, run on page load
  */
 function main() {
+    console.log("Running TacoHaven app");
+    
     configureAmplify();
 
     // Get the HTML element with ID `booking-form`

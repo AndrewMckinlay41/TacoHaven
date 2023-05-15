@@ -14,6 +14,12 @@
     "categories": {
       "api": {
         "tacohavenfinal": {}
+      },
+      "function": {
+        "tacohavenbookingemail": {
+          "deploymentBucketName": "amplify-tacohavenfinal-dev-175739-deployment",
+          "s3Key": "amplify-builds/tacohavenbookingemail-43495746694a51564750-build.zip"
+        }
       }
     }
   }
