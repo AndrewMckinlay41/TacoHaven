@@ -15,6 +15,14 @@
     },
     "s3Key": {
       "Type": "String"
+    },
+    "apitacohavenfinalGraphQLAPIIdOutput": {
+      "Type": "String",
+      "Default": "apitacohavenfinalGraphQLAPIIdOutput"
+    },
+    "apitacohavenfinalGraphQLAPIEndpointOutput": {
+      "Type": "String",
+      "Default": "apitacohavenfinalGraphQLAPIEndpointOutput"
     }
   },
   "Conditions": {
@@ -47,12 +55,12 @@
         "FunctionName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "tacohavenbookingemail",
+            "tacohavenemail",
             {
               "Fn::Join": [
                 "",
                 [
-                  "tacohavenbookingemail",
+                  "tacohavenemail",
                   "-",
                   {
                     "Ref": "env"
@@ -89,12 +97,12 @@
         "RoleName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "tacohavenfinalLambdaRolef6d7c1b4",
+            "tacohavenfinalLambdaRole18c3f5a3",
             {
               "Fn::Join": [
                 "",
                 [
-                  "tacohavenfinalLambdaRolef6d7c1b4",
+                  "tacohavenfinalLambdaRole18c3f5a3",
                   "-",
                   {
                     "Ref": "env"
@@ -163,6 +171,62 @@
             }
           ]
         }
+      }
+    },
+    "LambdaTriggerPolicyBookingRequest": {
+      "DependsOn": [
+        "LambdaExecutionRole"
+      ],
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyName": "amplify-lambda-execution-policy-BookingRequest",
+        "Roles": [
+          {
+            "Ref": "LambdaExecutionRole"
+          }
+        ],
+        "PolicyDocument": {
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+              "Effect": "Allow",
+              "Action": [
+                "dynamodb:DescribeStream",
+                "dynamodb:GetRecords",
+                "dynamodb:GetShardIterator",
+                "dynamodb:ListStreams"
+              ],
+              "Resource": {
+                "Fn::ImportValue": {
+                  "Fn::Sub": "${apitacohavenfinalGraphQLAPIIdOutput}:GetAtt:BookingRequestTable:StreamArn"
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "LambdaEventSourceMappingBookingRequest": {
+      "Type": "AWS::Lambda::EventSourceMapping",
+      "DependsOn": [
+        "LambdaTriggerPolicyBookingRequest",
+        "LambdaExecutionRole"
+      ],
+      "Properties": {
+        "BatchSize": 100,
+        "Enabled": true,
+        "EventSourceArn": {
+          "Fn::ImportValue": {
+            "Fn::Sub": "${apitacohavenfinalGraphQLAPIIdOutput}:GetAtt:BookingRequestTable:StreamArn"
+          }
+        },
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "LambdaFunction",
+            "Arn"
+          ]
+        },
+        "StartingPosition": "LATEST"
       }
     },
     "CustomLambdaExecutionPolicy": {

@@ -18,26 +18,36 @@
     }
   },
   "function": {
-    "tacohavenbookingemail": {
+    "tacohavenemail": {
       "build": true,
+      "dependsOn": [
+        {
+          "attributes": [
+            "GraphQLAPIIdOutput",
+            "GraphQLAPIEndpointOutput"
+          ],
+          "category": "api",
+          "resourceName": "tacohavenfinal"
+        }
+      ],
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
     }
   },
   "parameters": {
-    "AMPLIFY_function_tacohavenbookingemail_deploymentBucketName": {
+    "AMPLIFY_function_tacohavenemail_deploymentBucketName": {
       "usedBy": [
         {
           "category": "function",
-          "resourceName": "tacohavenbookingemail"
+          "resourceName": "tacohavenemail"
         }
       ]
     },
-    "AMPLIFY_function_tacohavenbookingemail_s3Key": {
+    "AMPLIFY_function_tacohavenemail_s3Key": {
       "usedBy": [
         {
           "category": "function",
-          "resourceName": "tacohavenbookingemail"
+          "resourceName": "tacohavenemail"
         }
       ]
     }

@@ -16,9 +16,9 @@
         "tacohavenfinal": {}
       },
       "function": {
-        "tacohavenbookingemail": {
+        "tacohavenemail": {
           "deploymentBucketName": "amplify-tacohavenfinal-dev-175739-deployment",
-          "s3Key": "amplify-builds/tacohavenbookingemail-43495746694a51564750-build.zip"
+          "s3Key": "amplify-builds/tacohavenemail-504e4a2f392f7a45654c-build.zip"
         }
       }
     }
