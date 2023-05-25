@@ -1,14 +1,19 @@
-# This "input" configures a global authorization rule to enable public access to
-# all models in this schema. Learn more about authorization rules here: https://docs.amplify.aws/cli/graphql/authorization-rules
+# This defines both our GraphQL API (which the client will use to interact with
+# our backend) and how the database should be laid out.
+
 input AMPLIFY { globalAuthRule: AuthRule = { allow: public } } # FOR TESTING ONLY!
 
+# Represents a single booking request
 type BookingRequest @model {
+  # First name
   fname: String!
+  # Last name
   lname: String!
   email: String!
   tel: String
   date: String
   time: String
+  # Number of guests
   numofg: Int
   comments: String
 }

@@ -4,9 +4,13 @@
  * This function will send an email to the business, letting them know of the booking request
  */
 
+// Import the AWS SES API
+// This is code written by Amazon for sending emails programmatically via SES.
 const SESApi = require("@aws-sdk/client-ses");
 const SESClient = SESApi.SESClient;
 const SendEmailCommand = SESApi.SendEmailCommand;
+
+// Client - The region corresponds to the AWS region of the backend
 const ses = new SESClient({ region: "eu-west-2" });
 
 // Email of the company, to which booking requests should be sent
@@ -20,7 +24,7 @@ const requestEmail = "andrewmckinlay41@gmail.com";
  * @type {import('@types/aws-lambda').APIGatewayProxyHandler}
  */
 exports.handler = async function(event) {
-  console.log(`Event: ${JSON.stringify(event)}`);
+  console.debug(`Event: ${JSON.stringify(event)}`);
 
   // This function is called for *all* database events, not just insertions
   // We skip over database events where the event name is not "INSERT"
@@ -32,6 +36,7 @@ exports.handler = async function(event) {
   // Send booking request to business
   const businessRequestCommand = new SendEmailCommand({
     Destination: {
+      // Send the booking request to the company email, and also to the customer
       ToAddresses: [requestEmail, record.dynamodb.NewImage.email.S],
     },
     Message: {
@@ -58,5 +63,6 @@ Thank you.`
     Source: requestEmail,
   });
 
+  // The SES client is asynchronous - we must `await` sending the email
   await ses.send(businessRequestCommand);
 };
